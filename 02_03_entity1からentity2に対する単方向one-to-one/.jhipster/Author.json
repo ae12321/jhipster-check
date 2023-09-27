@@ -1,0 +1,29 @@
+{
+  "changelogDate": "20230926220525",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValues": "MALE,FEMALE,OTHER"
+    }
+  ],
+  "name": "Author",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "id",
+      "otherEntityName": "authorInfo",
+      "otherEntityRelationshipName": "author",
+      "ownerSide": true,
+      "relationshipName": "authorInfo",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

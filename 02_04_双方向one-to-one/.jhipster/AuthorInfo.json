@@ -1,0 +1,28 @@
+{
+  "changelogDate": "20230926220850",
+  "fields": [
+    {
+      "fieldName": "age",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    }
+  ],
+  "name": "AuthorInfo",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "id",
+      "otherEntityName": "author",
+      "otherEntityRelationshipName": "authorInfo",
+      "ownerSide": true,
+      "relationshipName": "author",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

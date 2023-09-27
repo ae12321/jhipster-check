@@ -1,0 +1,10 @@
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? AuthorInfo
+? What is the name of the relationship? authorInfo
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+? Do you want to use JPA Derived Identifier - @MapsId? No
+? What is the name of this relationship in the other entity? author
+? When you display this relationship on client-side, which field from 'AuthorInfo' do you want to use? This  
+field will be displayed as a String, so it cannot be a Blob id
+? Do you want to add any validation rules to this relationship? No

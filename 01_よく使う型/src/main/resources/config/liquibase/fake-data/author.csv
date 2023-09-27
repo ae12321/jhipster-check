@@ -1,0 +1,11 @@
+id;col_a;col_b;col_c;col_d;col_e;col_f
+1;EXE;21;87;2023-09-26;true;../fake-data/blob/hipster.txt
+2;District Wooden;63;91;2023-09-26;false;../fake-data/blob/hipster.txt
+3;violet;11;96;2023-09-26;false;../fake-data/blob/hipster.txt
+4;XSS;37;9;2023-09-26;true;../fake-data/blob/hipster.txt
+5;Concrete Response In;76;90;2023-09-26;false;../fake-data/blob/hipster.txt
+6;Bedfordshire;29;59;2023-09-26;true;../fake-data/blob/hipster.txt
+7;Toys Central;39;85;2023-09-26;true;../fake-data/blob/hipster.txt
+8;Turnpike Cambridgesh;62;84;2023-09-26;true;../fake-data/blob/hipster.txt
+9;Steel schemas Liaiso;28;24;2023-09-26;false;../fake-data/blob/hipster.txt
+10;Adaptive Field;83;34;2023-09-26;true;../fake-data/blob/hipster.txt

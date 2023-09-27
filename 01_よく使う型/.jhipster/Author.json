@@ -1,0 +1,44 @@
+{
+  "changelogDate": "20230926213155",
+  "fields": [
+    {
+      "fieldName": "colA",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": 20,
+      "fieldValidateRulesMinlength": 0
+    },
+    {
+      "fieldName": "colB",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required", "unique", "min", "max"],
+      "fieldValidateRulesMax": 100,
+      "fieldValidateRulesMin": 0
+    },
+    {
+      "fieldName": "colC",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required", "unique", "min", "max"],
+      "fieldValidateRulesMax": 100,
+      "fieldValidateRulesMin": 0
+    },
+    {
+      "fieldName": "colD",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "colE",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "colF",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "name": "Author",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

@@ -1,0 +1,23 @@
+{
+  "changelogDate": "20230926230720",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Skill",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "skill",
+      "ownerSide": true,
+      "relationshipName": "student",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

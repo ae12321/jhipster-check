@@ -1,0 +1,114 @@
+-- public.author definition
+
+-- Drop table
+
+-- DROP TABLE public.author;
+
+CREATE TABLE public.author (
+	id int8 NOT NULL,
+	col_a varchar(20) NOT NULL,
+	col_b int8 NOT NULL,
+	col_c float8 NOT NULL,
+	col_d date NULL,
+	col_e bool NULL,
+	col_f text NULL,
+	CONSTRAINT author_pkey PRIMARY KEY (id),
+	CONSTRAINT ux_author__col_a UNIQUE (col_a),
+	CONSTRAINT ux_author__col_b UNIQUE (col_b),
+	CONSTRAINT ux_author__col_c UNIQUE (col_c)
+);
+
+
+-- public.databasechangelog definition
+
+-- Drop table
+
+-- DROP TABLE public.databasechangelog;
+
+CREATE TABLE public.databasechangelog (
+	id varchar(255) NOT NULL,
+	author varchar(255) NOT NULL,
+	filename varchar(255) NOT NULL,
+	dateexecuted timestamp NOT NULL,
+	orderexecuted int4 NOT NULL,
+	exectype varchar(10) NOT NULL,
+	md5sum varchar(35) NULL,
+	description varchar(255) NULL,
+	"comments" varchar(255) NULL,
+	tag varchar(255) NULL,
+	liquibase varchar(20) NULL,
+	contexts varchar(255) NULL,
+	labels varchar(255) NULL,
+	deployment_id varchar(10) NULL
+);
+
+
+-- public.databasechangeloglock definition
+
+-- Drop table
+
+-- DROP TABLE public.databasechangeloglock;
+
+CREATE TABLE public.databasechangeloglock (
+	id int4 NOT NULL,
+	"locked" bool NOT NULL,
+	lockgranted timestamp NULL,
+	lockedby varchar(255) NULL,
+	CONSTRAINT databasechangeloglock_pkey PRIMARY KEY (id)
+);
+
+
+-- public.jhi_authority definition
+
+-- Drop table
+
+-- DROP TABLE public.jhi_authority;
+
+CREATE TABLE public.jhi_authority (
+	"name" varchar(50) NOT NULL,
+	CONSTRAINT jhi_authority_pkey PRIMARY KEY (name)
+);
+
+
+-- public.jhi_user definition
+
+-- Drop table
+
+-- DROP TABLE public.jhi_user;
+
+CREATE TABLE public.jhi_user (
+	id int8 NOT NULL,
+	login varchar(50) NOT NULL,
+	password_hash varchar(60) NOT NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
+	email varchar(191) NULL,
+	image_url varchar(256) NULL,
+	activated bool NOT NULL,
+	lang_key varchar(10) NULL,
+	activation_key varchar(20) NULL,
+	reset_key varchar(20) NULL,
+	created_by varchar(50) NOT NULL,
+	created_date timestamp NULL,
+	reset_date timestamp NULL,
+	last_modified_by varchar(50) NULL,
+	last_modified_date timestamp NULL,
+	CONSTRAINT jhi_user_pkey PRIMARY KEY (id),
+	CONSTRAINT ux_user_email UNIQUE (email),
+	CONSTRAINT ux_user_login UNIQUE (login)
+);
+
+
+-- public.jhi_user_authority definition
+
+-- Drop table
+
+-- DROP TABLE public.jhi_user_authority;
+
+CREATE TABLE public.jhi_user_authority (
+	user_id int8 NOT NULL,
+	authority_name varchar(50) NOT NULL,
+	CONSTRAINT jhi_user_authority_pkey PRIMARY KEY (user_id, authority_name),
+	CONSTRAINT fk_authority_name FOREIGN KEY (authority_name) REFERENCES public.jhi_authority("name"),
+	CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES public.jhi_user(id)
+);

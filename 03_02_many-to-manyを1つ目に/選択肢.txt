@@ -1,0 +1,10 @@
+
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Skill
+? What is the name of the relationship? skill
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? Yes
+? What is the name of this relationship in the other entity? student
+? When you display this relationship on client-side, which field from 'Skill' do you want to use? This field 
+will be displayed as a String, so it cannot be a Blob id
+? Do you want to add any validation rules to this relationship? No
